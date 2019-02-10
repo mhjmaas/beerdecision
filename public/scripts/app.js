@@ -49,11 +49,6 @@ var renderApp = function renderApp() {
             app.subtitle
         ),
         React.createElement(
-            'p',
-            null,
-            app.options && app.options.length > 0 ? 'Here are your beers' : 'No beers :('
-        ),
-        React.createElement(
             'button',
             { disabled: app.options.length === 0, onClick: onMakeDecision },
             'Which beer to drink?'
@@ -62,6 +57,11 @@ var renderApp = function renderApp() {
             'button',
             { onClick: removeAll },
             'Remove All'
+        ),
+        React.createElement(
+            'p',
+            null,
+            app.options && app.options.length > 0 ? 'Here are your beers:' : 'No beers :('
         ),
         React.createElement(
             'ol',
